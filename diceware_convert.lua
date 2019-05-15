@@ -16,7 +16,8 @@ while line ~= nil do
 	if figures and symbol then
 		if num_dices == nil then
 			num_dices = #figures
-		elseif #figures == num_dices then
+		end
+		if #figures == num_dices then
 			outfile:write("[" .. figures .. "] = " .. string.format("%q", symbol) .. ",\n")
 		end
 	end
